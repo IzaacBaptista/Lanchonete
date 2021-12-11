@@ -14,7 +14,7 @@ class AuthService {
         if (!token)
             return false;
         try{
-            const { exp: expiration } = decode(token); //pegaar a data de expiração
+            const { exp: expiration } = decode(token); //pegar a data de expiração
             if (!!expiration && Date.now() > expiration * 1000){
                 return false;
             } else {
