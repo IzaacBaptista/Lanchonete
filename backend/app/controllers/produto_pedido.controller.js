@@ -14,25 +14,25 @@ exports.create = (req, res) => {
 
 exports.findAll = (req, res) => {
     produtoPedidoModel.getAll((err,data) => {
-        res.send(data); 
+        res.send(data);
      });
 }
 
 exports.findById = (req, res) => {
     produtoPedidoModel.getById(req.params.produtoPedidoId, (err, data) => {
-        res.send(data);       
+        res.send(data);
     });
 }
 
 exports.findByPedido = (req, res) => {
     produtoPedidoModel.getByPedido(req.params.pedidoId, (err, data) => {
-        res.send(data);       
+        res.send(data);
     });
 }
 
 exports.findByProduto = (req, res) => {
     produtoPedidoModel.getByProduto(req.params.produtoId, (err, data) => {
-        res.send(data);       
+        res.send(data);
     });
 }
 
@@ -55,7 +55,7 @@ exports.delete = (req, res) => {
                 res.status(404).send({ message: "ProdutoPedido não encontrado."});
             } else {
                 res.status(500).send({ message: "Erro ao deletar registro"});
-            } 
+            }
         } else {
             res.send({message: "ProdutoPedido deletado com sucesso."});
         }
@@ -69,7 +69,7 @@ exports.deleteByPedido = (req, res) => {
                 res.status(404).send({ message: "Pedido não encontrado."});
             } else {
                 res.status(500).send({ message: "Erro ao deletar registro"});
-            } 
+            }
         } else {
             res.send({message: "Pedido deletado com sucesso."});
         }
@@ -83,7 +83,7 @@ exports.deleteByProduto = (req, res) => {
                 res.status(404).send({ message: "Produto não encontrado."});
             } else {
                 res.status(500).send({ message: "Erro ao deletar registro"});
-            } 
+            }
         } else {
             res.send({message: "Produto deletado com sucesso."});
         }
@@ -97,7 +97,7 @@ exports.deleteAll = (req, res) => {
                 res.status(404).send({ message: "ProdutoPedido não encontrado."});
             } else {
                 res.status(500).send({ message: "Erro ao deletar registro"});
-            } 
+            }
         } else {
             res.send({message: "ProdutoPedidos deletados com sucesso."});
         }

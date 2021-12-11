@@ -4,12 +4,12 @@
       <v-card>
         <v-card-text class="pt-2">
           <v-form v-model="formValido">
-            <v-text-field 
-              label="E-mail" 
-              v-model="email" 
+            <v-text-field
+              label="E-mail"
+              v-model="email"
               :rules="regrasEmail"
-              require 
-              error-count="2" 
+              require
+              error-count="2"
             />
             <v-text-field
               label="Senha"

@@ -55,7 +55,7 @@ export default {
             AuthService.signIn(dadosUsuario).then(response => {
                 AuthService.setUserData(response.data);
                 this.$router.push({name:"ListProducts"});
-            }).catch(e =>{ 
+            }).catch(e =>{
                 this.msgErro = e;
                 console.log(e);
             })

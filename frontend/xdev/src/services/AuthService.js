@@ -22,7 +22,7 @@ class AuthService {
             }
         }catch(_) {
             return false;
-        }    
+        }
     }
     logOut(){
         localStorage.removeItem("user-token");

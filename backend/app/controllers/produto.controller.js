@@ -78,7 +78,7 @@ exports.update = (req, res) => {
                 res.send(data);
             }
         });
-    }    
+    }
 };
 
 exports.delete = (req, res) => {
